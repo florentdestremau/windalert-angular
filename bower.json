@@ -1,0 +1,22 @@
+{
+  "name": "angular",
+  "version": "0.0.0",
+  "authors": [
+    "Florent Destremau <florent.destremau@gmail.com>"
+  ],
+  "description": "Boilerplate for a simple angular app",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.4"
+  }
+}

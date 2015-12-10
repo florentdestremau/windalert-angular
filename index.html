@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>Hey there! Welcome to my app !</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/master.css" media="screen" title="main css" charset="utf-8">
+  </head>
+  <body class="container-fluid">
+    <div ng-include="'views/nav.html'"></div>
+    <div class="container" ui-view></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
