@@ -20,7 +20,44 @@
 </div>
 <div class="container" ng-if="data_retrieved">
   <h3>Le touquet (4 prochains jours)</h3>
-  <ul>
-    <li ng-repeat="result in data.results.slice(2)">{{result.values_1[0]}} {{result.values_1[1]}} - {{result.value_1}} : <strong>{{(result.value_3 / 1.852).toFixed(0)}} - {{(result.value_4 / 1.852).toFixed(0)}}</strong> nds, direction {{result["image_2/_title"]}}</li>
-  </ul>
+  <table class="table table-condensed table-responsive table-striped">
+    <thead>
+      <tr>
+        <th>
+          Jour
+        </th>
+        <th>
+          Heure
+        </th>
+        <th>
+          Base (nds)
+        </th>
+        <th>
+          Rafales (nds)
+        </th>
+        <th>
+          Direction
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="result in data.results.slice(2)">
+        <td>
+          {{result.values_1[0]}} {{result.values_1[1]}}
+        </td>
+        <td>
+          {{result.value_1}}
+        </td>
+        <td>
+          {{(result.value_3 / 1.852).toFixed(0)}}
+        </td>
+        <td>
+          {{(result.value_4 / 1.852).toFixed(0)}}
+        </td>
+        <td>
+          <img src="{{result.image_2}}" title="Direction : {{result['image_2/_title']}}" alt="Direction : {{result['image_2/_title']}}"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
