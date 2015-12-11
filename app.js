@@ -9,7 +9,13 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'views/home.html',
       controller: 'HomeCtrl',
-    });
+    })
+    .state('feedback', {
+      url: '/feedback',
+      templateUrl: 'views/feedback.html',
+      controller: 'MainCtrl',
+    })
+    ;
 });
 
 myApp.controller('HomeCtrl', function ($scope, $http) {
