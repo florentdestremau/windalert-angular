@@ -4,60 +4,9 @@
     Un petit site pour récupérer les prévisions de <a href="http://www.meteociel.fr/">Meteociel</a> en noeuds à travers <a href="https://import.io/">Import.io</a>.
   </p>
 </div>
-<div ng-if="!data_retrieved">
-  <div class="cssload-preloader">
-			<span>C</span>
-		<span>h</span>
-		<span>a</span>
-		<span>r</span>
-		<span>g</span>
-		<span>e</span>
-		<span>m</span>
-		<span>e</span>
-		<span>n</span>
-		<span>t</span>
-</div>
-</div>
-<div class="container" ng-if="data_retrieved">
-  <h3>Le touquet (4 prochains jours)</h3>
-  <table class="table table-condensed table-responsive table-striped">
-    <thead>
-      <tr>
-        <th>
-          Jour
-        </th>
-        <th>
-          Heure
-        </th>
-        <th>
-          Base (nds)
-        </th>
-        <th>
-          Rafales (nds)
-        </th>
-        <th>
-          Direction
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="result in data.results.slice(2)">
-        <td>
-          {{result.values_1[0]}} {{result.values_1[1]}}
-        </td>
-        <td>
-          {{result.value_1}}
-        </td>
-        <td>
-          {{(result.value_3 / 1.852).toFixed(0)}}
-        </td>
-        <td>
-          {{(result.value_4 / 1.852).toFixed(0)}}
-        </td>
-        <td>
-          <img src="{{result.image_2}}" title="Direction : {{result['image_2/_title']}}" alt="Direction : {{result['image_2/_title']}}"/>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<section>
+  <ul class="list-group">
+    <button class="btn btn-primary" ui-sref="spot({'spot':'le-touquet'})">Le Touquet</button>
+    <button class="btn btn-primary" ui-sref="spot({'spot':'le-crotoy'})">Le Crotoy</button>
+  </ul>
+</section>
