@@ -18,6 +18,9 @@
         <th>
           Direction
         </th>
+        <th>
+          Météo
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -36,6 +39,9 @@
         </td>
         <td>
           <img src="{{result['image_2']}}" title="Direction : {{result['image_2/_title']}}" alt="Direction : {{result['image_2/_title']}}"/>
+        </td>
+        <td>
+          <img src="{{result['image_3']}}" alt="Meteo" />&nbsp;&nbsp;<span ng-if="result['values_2'] !== '--'">{{result['values_2']}}</span>
         </td>
       </tr>
     </tbody>
